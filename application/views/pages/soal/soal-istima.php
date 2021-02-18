@@ -6,7 +6,7 @@
                     </div>
                 </div>
             <?php else : ?>
-                <form action="<?= base_url()?>soal/add_jawaban" method="post">
+                <form action="<?= base_url()?>soal/add_jawaban" method="post" id="formSoal">
                     <div class="row">
                         <div class="col-12 col-md-12 mb-3 soal" id="soal">
                             <ul class="list-group">
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col-12">
                         <div class="d-flex justify-content-end">
-                            <input type="submit" value="Simpan" class="btn btn-sm btn-primary">
+                            <input type="submit" value="Simpan" id="submitForm" class="btn btn-sm btn-primary">
                         </div>                                        
                     </div>
                 </form>
@@ -126,5 +126,29 @@
 <div class="overlay"></div>
 
 <script>
-    
+    $("#formSoal").submit(function(){
+        var c = confirm("Yakin telah menyelesaikan pekerjaan Anda?")
+        return c
+    })
+
+    var submit_clicked = false;
+
+    $('input[type="submit"]').click(function(){
+        submit_clicked = true;
+    });
+
+
+    window.onbeforeunload = function closeEditorWarning () {
+
+    /** Check to see if the settings warning is displayed */
+    if(($('#unsaved-settings').css('display') !== 'none') && 
+        submit_clicked === false) {
+        bol_option_changed = true;
+    }
+
+    /** Display a warning if the user is trying to leave the page with unsaved settings */
+    if(bol_option_changed === true){
+        return '';
+    }
+    };
 </script>

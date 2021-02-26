@@ -302,6 +302,7 @@
                 <th style="padding: 10px">No</th>
                 <th style="padding: 10px">Nama Lengkap</th>
                 <th style="padding: 10px">TTL</th>
+                <th style="padding: 10px">Alamat</th>
                 <th style="padding: 10px">No Whatsapp</th>
                 <th style="padding: 10px">Email</th>
                 <th style="padding: 10px">Nilai Istima</th>
@@ -317,6 +318,7 @@
                     <td style="padding: 10px"><?= $i+1?></td>
                     <td style="padding: 10px"><?= $respon['nama']?></td>
                     <td style="padding: 10px"><?= $respon['t4_lahir'] . ", " . date("d-m-Y", strtotime($respon['tgl_lahir']))?></td>
+                    <td style="padding: 10px"><?= $respon['alamat']?></td>
                     <td style="padding: 10px"><?= $respon['no_wa']?></td>
                     <td style="padding: 10px"><?= $respon['email']?></td>
                     <td style="padding: 10px"><center><?= istima_tarakib($respon['nilai_istima'])?>(<?= $respon['nilai_istima']?>/40 )</center></td>

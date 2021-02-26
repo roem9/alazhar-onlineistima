@@ -131,6 +131,7 @@ class Soal extends CI_Controller {
             "no_wa" => $this->input->post("no_wa"),
             "t4_lahir" => $this->input->post("t4_lahir"),
             "tgl_lahir" => $this->input->post("tgl_lahir"),
+            "alamat" => $this->input->post("alamat"),
             "nilai_istima" => $nilai_istima,
             "nilai_tarakib" => $nilai_tarakib,
             "nilai_qiroah" => $nilai_qiroah,

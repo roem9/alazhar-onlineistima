@@ -18,7 +18,7 @@ class Soal extends CI_Controller {
         ini_set('xdebug.var_display_max_data', '1024');
     }
     
-    public function istima()
+    public function index()
     {
         $data['title'] = "TES TOAFL";
 
@@ -29,7 +29,7 @@ class Soal extends CI_Controller {
         $data['teks'] = $this->Soal_model->get_teks_qiroah();
 
         $this->load->view("pages/layout/header-user", $data);
-        $this->load->view("pages/soal/soal-istima", $data);
+        $this->load->view("pages/soal/soal-toafl", $data);
         $this->load->view("pages/layout/footer-user");
     }
 
@@ -133,7 +133,7 @@ class Soal extends CI_Controller {
 
         $this->Admin_model->add_data("respon_toafl", $data);
         $this->session->set_flashdata('pesan', 'Anda telah menyelesaikan tes TOAFL Istima');
-        redirect(base_url("soal/istima"));
+        redirect(base_url("soal"));
     }
 }
 

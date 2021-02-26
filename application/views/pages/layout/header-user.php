@@ -60,6 +60,6 @@
     <div id="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-info sticky-top navbar-ku">
             <div class="container">
-                <a id="sidebarCollapse" class="btn btn-sm"><img src="<?= base_url()?>assets/img/logo.png" width="25"><span class="text-light ml-2"><b><?= $title?></b></span></span></a>
+                <a id="sidebarCollapse" class="btn btn-sm"><img src="<?= base_url()?>assets/img/logo.png" width="25"><span class="text-light ml-2 titleBar"><b><?= $title?></b></span></span></a>
             </div>
         </nav>

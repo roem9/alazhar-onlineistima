@@ -20,10 +20,13 @@ class Soal extends CI_Controller {
     
     public function istima()
     {
-        $data['title'] = "SOAL ISTIMA TOAFL";
+        $data['title'] = "TES TOAFL";
 
         $data['soal'] = $this->Soal_model->get_soal_istima();
         $data['audio'] = $this->Soal_model->get_audio_istima();
+        $data['tarakib'] = $this->Soal_model->get_soal_tarakib();
+        $data['qiroah'] = $this->Soal_model->get_soal_qiroah();
+        $data['teks'] = $this->Soal_model->get_teks_qiroah();
 
         $this->load->view("pages/layout/header-user", $data);
         $this->load->view("pages/soal/soal-istima", $data);
@@ -44,18 +47,72 @@ class Soal extends CI_Controller {
         $this->load->view("pages/soal/respon", $data);
     }
 
+    public function respon_toafl(){
+        $data['title'] = "Jawaban Peserta";
+
+        $respon = $this->Admin_model->get_all("respon_toafl");
+        $data['respon'] = [];
+        foreach ($respon as $i => $respon) {
+            $data['respon'][$i] = $respon;
+            $jawaban = explode("###", $respon['text']);
+            $data['respon'][$i]['text'] = $jawaban;
+        }
+
+        $this->load->view("pages/soal/respon_toafl", $data);
+    }
+
+    public function email_check(){
+        $email = $this->input->post("email");
+        $data = $this->Admin_model->get_one("respon_toafl", ["email" => $email]);
+        echo json_encode($data['email']);
+    }
+
     public function add_jawaban(){
         // var_dump($_POST);
         // exit();
         $soal = $this->Soal_model->get_soal_istima();
-        $jawaban = $this->input->post("soal");
+        $jawaban = $this->input->post("soal_istima");
         // var_dump($jawaban);
         $text = "";
-        $nilai = 0;
+        $nilai_istima = 0;
 
         foreach ($soal as $i => $soal) {
             if($soal['jawaban'] == $jawaban[$i]){
-                $nilai += 1;
+                $nilai_istima += 1;
+                $status = "benar";
+            } else {
+                $status = "salah";
+            }
+
+            $text .= $jawaban[$i]."/".$status."###";
+        }
+
+        
+        $soal = $this->Soal_model->get_soal_tarakib();
+        $jawaban = $this->input->post("soal_tarakib");
+
+        $nilai_tarakib = 0;
+
+        foreach ($soal as $i => $soal) {
+            if($soal['jawaban'] == $jawaban[$i]){
+                $nilai_tarakib += 1;
+                $status = "benar";
+            } else {
+                $status = "salah";
+            }
+
+            $text .= $jawaban[$i]."/".$status."###";
+        }
+
+        
+        $soal = $this->Soal_model->get_soal_qiroah();
+        $jawaban = $this->input->post("soal_qiroah");
+
+        $nilai_qiroah = 0;
+
+        foreach ($soal as $i => $soal) {
+            if($soal['jawaban'] == $jawaban[$i]){
+                $nilai_qiroah += 1;
                 $status = "benar";
             } else {
                 $status = "salah";
@@ -68,11 +125,13 @@ class Soal extends CI_Controller {
             "email" => $this->input->post("email"),
             "nama" => $this->input->post("nama"),
             "no_wa" => $this->input->post("no_wa"),
-            "nilai" => $nilai,
+            "nilai_istima" => $nilai_istima,
+            "nilai_tarakib" => $nilai_tarakib,
+            "nilai_qiroah" => $nilai_qiroah,
             "text" => $text,
         ];
 
-        $this->Admin_model->add_data("respon", $data);
+        $this->Admin_model->add_data("respon_toafl", $data);
         $this->session->set_flashdata('pesan', 'Anda telah menyelesaikan tes TOAFL Istima');
         redirect(base_url("soal/istima"));
     }

@@ -130,7 +130,7 @@
                                                                     <div class="text-right">
                                                                         <label for="soal<?= $i.$k?>" class="mr-2" id="container-content"><?= $data?></label>
                                                                     </div>
-                                                                    <input type="radio" class="soal_istima" id="soal_istima<?= $i.$k?>" name="soal_istima[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?> checked>
+                                                                    <input type="radio" class="soal_istima" id="soal_istima<?= $i.$k?>" name="soal_istima[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?>>
                                                                 </div>
                                                             <?php endforeach;?>
                                                         </div>
@@ -175,7 +175,7 @@
                                                                     <div class="text-right">
                                                                         <label for="soal<?= $i.$k?>" class="mr-2" id="container-content"><?= $data?></label>
                                                                     </div>
-                                                                    <input type="radio" class="soal_tarakib" id="soal_tarakib<?= $i.$k?>" name="soal_tarakib[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?> checked>
+                                                                    <input type="radio" class="soal_tarakib" id="soal_tarakib<?= $i.$k?>" name="soal_tarakib[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?>>
                                                                 </div>
                                                             <?php endforeach;?>
                                                         </div>
@@ -312,7 +312,7 @@
                                                                     <div class="text-right">
                                                                         <label for="soal<?= $i.$k?>" class="mr-2" id="container-content"><?= $data?></label>
                                                                     </div>
-                                                                    <input type="radio" class="soal_qiroah" id="soal_qiroah<?= $i.$k?>" name="soal_qiroah[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?> checked>
+                                                                    <input type="radio" class="soal_qiroah" id="soal_qiroah<?= $i.$k?>" name="soal_qiroah[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?>>
                                                                 </div>
                                                             <?php endforeach;?>
                                                         </div>

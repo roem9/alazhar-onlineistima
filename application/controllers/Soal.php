@@ -64,7 +64,11 @@ class Soal extends CI_Controller {
     public function email_check(){
         $email = $this->input->post("email");
         $data = $this->Admin_model->get_one("respon_toafl", ["email" => $email]);
-        echo json_encode($data['email']);
+        if($data){
+            echo json_encode($data['email']);
+        } else {
+            echo json_encode("");
+        }
     }
 
     public function add_jawaban(){

@@ -64,11 +64,7 @@ class Soal extends CI_Controller {
     public function email_check(){
         $email = $this->input->post("email");
         $data = $this->Admin_model->get_one("respon_toafl", ["email" => $email]);
-        if($data){
-            echo json_encode($data['email']);
-        } else {
-            echo json_encode("");
-        }
+        echo json_encode($data['email']);
     }
 
     public function add_jawaban(){
@@ -129,6 +125,8 @@ class Soal extends CI_Controller {
             "email" => $this->input->post("email"),
             "nama" => $this->input->post("nama"),
             "no_wa" => $this->input->post("no_wa"),
+            "t4_lahir" => $this->input->post("t4_lahir"),
+            "tgl_lahir" => $this->input->post("tgl_lahir"),
             "nilai_istima" => $nilai_istima,
             "nilai_tarakib" => $nilai_tarakib,
             "nilai_qiroah" => $nilai_qiroah,
@@ -136,7 +134,7 @@ class Soal extends CI_Controller {
         ];
 
         $this->Admin_model->add_data("respon_toafl", $data);
-        $this->session->set_flashdata('pesan', 'Anda telah menyelesaikan tes TOAFL Istima');
+        $this->session->set_flashdata('pesan', 'Anda telah menyelesaikan tes TOAFL. Nilai / Score TOAFL akan diumumkan oleh Admin Al-Azhar. Mohon ditunggu');
         redirect(base_url("soal"));
     }
 }

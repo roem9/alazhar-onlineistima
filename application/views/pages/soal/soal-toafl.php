@@ -38,6 +38,14 @@
                                         <label for="no_wa">No Whatsapp</label>
                                         <input type="text" name="no_wa" id="no_wa" class="form-control form-control-md" required>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="t4_lahir">Tempat Lahir</label>
+                                        <input type="text" name="t4_lahir" id="t4_lahir" class="form-control form-control-md" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tgl_lahir">Tgl Lahir</label>
+                                        <input type="date" name="tgl_lahir" id="tgl_lahir" class="form-control form-control-md" required>
+                                    </div>
                                 </li>
                             </ul>
                             <div class="d-flex justify-content-end">
@@ -356,8 +364,10 @@
         let email = $("#email").val();
         let nama = $("#nama").val();
         let no_wa = $("#no_wa").val();
+        let t4_lahir = $("#t4_lahir").val();
+        let tgl_lahir = $("#tgl_lahir").val();
 
-        if(email == "" || nama == "" || no_wa == ""){
+        if(email == "" || nama == "" || no_wa == "" || t4_lahir == "" || tgl_lahir == ""){
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',

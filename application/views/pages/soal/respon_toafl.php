@@ -309,6 +309,7 @@
                 <th style="padding: 10px">Nilai Tarakib</th>
                 <th style="padding: 10px">Nilai Qiroah</th>
                 <th style="padding: 10px">SKOR TOAFL</th>
+                <th style="padding: 10px">SKOR TOAFL</th>
             </tr>
         </thead>
         <tbody>
@@ -324,6 +325,7 @@
                     <td style="padding: 10px"><center><?= istima_tarakib($respon['nilai_istima'])?>(<?= $respon['nilai_istima']?>/40 )</center></td>
                     <td style="padding: 10px"><center><?= istima_tarakib($respon['nilai_tarakib'])?>(<?= $respon['nilai_tarakib']?>/40)</center></td>
                     <td style="padding: 10px"><center><?= qiroah($respon['nilai_qiroah'])?>(<?= $respon['nilai_qiroah']?>/50)</center></td>
+                    <td style="padding: 10px"><center><?= round($skor)?></center></td>
                     <td style="padding: 10px"><center><?= $skor?></center></td>
                 </tr>
             <?php endforeach;?>

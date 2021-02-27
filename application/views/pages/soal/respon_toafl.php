@@ -313,7 +313,7 @@
         </thead>
         <tbody>
             <?php foreach ($respon as $i => $respon) :?>
-                <?php $skor = ((istima_tarakib($respon['nilai_istima']) + istima_tarakib($respon['nilai_tarakib']) + qiroah($respon['nilai_qiroah'])) * 10) / 5;?>
+                <?php $skor = ((istima_tarakib($respon['nilai_istima']) + istima_tarakib($respon['nilai_tarakib']) + qiroah($respon['nilai_qiroah'])) * 10) / 3;?>
                 <tr>
                     <td style="padding: 10px"><?= $i+1?></td>
                     <td style="padding: 10px"><?= $respon['nama']?></td>

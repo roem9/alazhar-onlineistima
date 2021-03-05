@@ -18,7 +18,7 @@ class Soal extends CI_Controller {
         ini_set('xdebug.var_display_max_data', '1024');
     }
     
-    public function index()
+    public function d33c1f19890520fa0423b6c939551ee()
     {
         $data['title'] = "TES TOAFL";
 

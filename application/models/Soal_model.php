@@ -1261,35 +1261,35 @@ class Soal_model extends CI_Model {
         $data = [
             [
                 "judul" => "استمع الى الحوار التالى",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/1.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/1.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع إلى الناص التالى",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/2.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/2.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع الى الحوار جيدا",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/3.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/3.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع جيدا",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/4.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/4.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع إلى الناص التالى",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/4.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/4.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع إلى الحوار التالى",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/5.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/5.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع الحوار التالى!",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/6.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/6.mp3' type='audio/mp3'></audio>",
             ],
             [
                 "judul" => "استمع إلى مكالمة التالية!",
-                "audio" => "<audio controls><source src='".base_url()."assets/sounds/7.mp3' type='audio/mp3'></audio>",
+                "audio" => "<audio controls controlsList='nodownload'><source src='".base_url()."assets/sounds/7.mp3' type='audio/mp3'></audio>",
             ]
         ];
 

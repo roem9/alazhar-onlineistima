@@ -140,7 +140,7 @@ class Soal extends CI_Controller {
 
         $this->Admin_model->add_data("respon_toafl", $data);
         $this->session->set_flashdata('pesan', 'Anda telah menyelesaikan tes TOAFL. Nilai / Score TOAFL akan diumumkan oleh Admin Al-Azhar. Mohon ditunggu');
-        redirect(base_url("soal"));
+        redirect(base_url("soal/d33c1f19890520fa0423b6c939551ee"));
     }
 }
 

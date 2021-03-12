@@ -18,7 +18,7 @@ class Soal extends CI_Controller {
         ini_set('xdebug.var_display_max_data', '1024');
     }
     
-    public function d33c1f19890520fa0423b6c939551ee()
+    public function hqd33c1f19890520fa0423b6c939551ee()
     {
         $data['title'] = "TES TOAFL";
 
@@ -132,6 +132,7 @@ class Soal extends CI_Controller {
             "t4_lahir" => $this->input->post("t4_lahir"),
             "tgl_lahir" => $this->input->post("tgl_lahir"),
             "alamat" => $this->input->post("alamat"),
+            "alamat_pengiriman" => $this->input->post("alamat_pengiriman"),
             "nilai_istima" => $nilai_istima,
             "nilai_tarakib" => $nilai_tarakib,
             "nilai_qiroah" => $nilai_qiroah,
@@ -140,7 +141,7 @@ class Soal extends CI_Controller {
 
         $this->Admin_model->add_data("respon_toafl", $data);
         $this->session->set_flashdata('pesan', 'Anda telah menyelesaikan tes TOAFL. Nilai / Score TOAFL akan diumumkan oleh Admin Al-Azhar. Mohon ditunggu');
-        redirect(base_url("soal/d33c1f19890520fa0423b6c939551ee"));
+        redirect(base_url("soal/hqd33c1f19890520fa0423b6c939551ee"));
     }
 }
 

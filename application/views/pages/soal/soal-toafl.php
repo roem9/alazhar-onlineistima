@@ -50,6 +50,11 @@
                                         <label for="alamat">Alamat</label>
                                         <textarea name="alamat" id="alamat" class="form-control form-control-sm"></textarea>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="alamat_pengiriman">Alamat Pengiriman</label>
+                                        <textarea name="alamat_pengiriman" id="alamat_pengiriman" class="form-control form-control-sm"></textarea>
+                                        <small id="emailHelp" class="form-text text-muted">Form Alamat pengiriman diisi jika memesan sertifikat</small>
+                                    </div>
                                 </li>
                             </ul>
                             <div class="d-flex justify-content-end">

@@ -47,7 +47,7 @@ class Soal extends CI_Controller {
         $this->load->view("pages/soal/respon", $data);
     }
 
-    public function respon_toafl(){
+    public function dataToaflPeserta(){
         $data['title'] = "Jawaban Peserta";
 
         $respon = $this->Admin_model->get_all("respon_toafl");

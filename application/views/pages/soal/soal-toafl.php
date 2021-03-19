@@ -48,8 +48,8 @@
                         <a href="https://wa.me/6285327880888?text=Permisi%20Admin%20Kak%20Mona%2C%20<?= $data['pesan1']?>" target="_blank" class="btn btn-block btn-success">Hubungi kak Mona</a></p>
                         <a href="https://wa.me/628113695333?text=Permisi%20Admin%20Kak%20Abbas%2C%20<?= $data['pesan1']?>" target="_blank" class="btn btn-block btn-success">Hubungi kak Abbas</a></p>
                         <p>Adapun yang ingin mendapatkan E-Sertifikat plus Sertifikat TOAFL RESMI KURSUS BAHASA ARAB AL-AZHAR dengan SK DIKNAS Nomor 421.9/565/418.20/2020 (Dikenai biaya 95.000/ belum termasuk ongkir, untuk biaya ongkir akan diinfokan oleh admin) Langsung Klik salah satu tombol dibawah ini : <br> 
-                        <a href="https://wa.me/6282335124149?text=Permisi%20Admin%20Kak%20Triani%2C%20<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Hubungi Kak Triani</a></p>
-                        <a href="https://wa.me/6285156604104?text=Permisi%20Admin%20Kak%20Kresna%2C%20<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Hubungi Kak Kresna</a></p>
+                        <a href="https://wa.me/6285156604104?text=Permisi%20Admin%20Kak%20Triani%2C%20<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Hubungi Kak Triani</a></p>
+                        <a href="https://wa.me/6282335124149?text=Permisi%20Admin%20Kak%20Kresna%2C%20<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Hubungi Kak Kresna</a></p>
                     </div>
                 </div>
             <?php else : ?>

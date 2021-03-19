@@ -44,8 +44,12 @@
                             <li>Sertifikat berlaku dua tahun dari tanggal penerbitanya.</li>
                         </ul>
 
-                        <p>Adapun untuk pemesanan E-Sertifikat TOAFL RESMI KURSUS BAHASA ARAB AL-AZHAR dengan SK DIKNAS Nomor 421.9/565/418.20/2020 (Biaya Penerbitan Sertifikat 75.000) Langsung Klik tombol dibawah ini <br> <a href="https://wa.me/628113695333?text=<?= $data['pesan1']?>" target="_blank" class="btn btn-block btn-success">Pesan E-Sertifikat</a></p>
-                        <p>Adapun yang ingin mendapatkan E-Sertifikat plus Sertifikat TOAFL RESMI KURSUS BAHASA ARAB AL-AZHAR dengan SK DIKNAS Nomor 421.9/565/418.20/2020 (Dikenai biaya 95.000/ belum termasuk ongkir, untuk biaya ongkir akan diinfokan oleh admin) Langsung Klik tombol dibawah ini : <br> <a href="https://wa.me/6285156604104?text=<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Pesan E-Sertifikat + cetak</a></p>
+                        <p>Adapun untuk pemesanan E-Sertifikat TOAFL RESMI KURSUS BAHASA ARAB AL-AZHAR dengan SK DIKNAS Nomor 421.9/565/418.20/2020 (Biaya Penerbitan Sertifikat 75.000) Langsung Klik salah satu tombol dibawah ini <br> 
+                        <a href="https://wa.me/6285327880888?text=Permisi%20Admin%20Kak%20Mona%2C%20<?= $data['pesan1']?>" target="_blank" class="btn btn-block btn-success">Hubungi kak Mona</a></p>
+                        <a href="https://wa.me/628113695333?text=Permisi%20Admin%20Kak%20Abbas%2C%20<?= $data['pesan1']?>" target="_blank" class="btn btn-block btn-success">Hubungi kak Abbas</a></p>
+                        <p>Adapun yang ingin mendapatkan E-Sertifikat plus Sertifikat TOAFL RESMI KURSUS BAHASA ARAB AL-AZHAR dengan SK DIKNAS Nomor 421.9/565/418.20/2020 (Dikenai biaya 95.000/ belum termasuk ongkir, untuk biaya ongkir akan diinfokan oleh admin) Langsung Klik salah satu tombol dibawah ini : <br> 
+                        <a href="https://wa.me/6282335124149?text=Permisi%20Admin%20Kak%20Triani%2C%20<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Hubungi Kak Triani</a></p>
+                        <a href="https://wa.me/6285156604104?text=Permisi%20Admin%20Kak%20Kresna%2C%20<?= $data['pesan2']?>" target="_blank" class="btn btn-block btn-success">Hubungi Kak Kresna</a></p>
                     </div>
                 </div>
             <?php else : ?>
@@ -178,7 +182,7 @@
                                                                     <div class="text-right">
                                                                         <label for="soal_istima<?= $i.$k?>" class="mr-2" id="container-content"><?= $data?></label>
                                                                     </div>
-                                                                    <input type="radio" class="soal_istima" id="soal_istima<?= $i.$k?>" name="soal_istima[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?>>
+                                                                    <input type="radio" class="soal_istima" id="soal_istima<?= $i.$k?>" name="soal_istima[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?> checked>
                                                                 </div>
                                                             <?php endforeach;?>
                                                         </div>
@@ -232,7 +236,7 @@
                                                                     <div class="text-right">
                                                                         <label for="soal_tarakib<?= $i.$k?>" class="mr-2" id="container-content"><?= $data?></label>
                                                                     </div>
-                                                                    <input type="radio" class="soal_tarakib" id="soal_tarakib<?= $i.$k?>" name="soal_tarakib[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?>>
+                                                                    <input type="radio" class="soal_tarakib" id="soal_tarakib<?= $i.$k?>" name="soal_tarakib[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?> checked>
                                                                 </div>
                                                             <?php endforeach;?>
                                                         </div>
@@ -367,7 +371,7 @@
                                                                     <div class="text-right">
                                                                         <label for="soal_qiroah<?= $i.$k?>" class="mr-2" id="container-content"><?= $data?></label>
                                                                     </div>
-                                                                    <input type="radio" class="soal_qiroah" id="soal_qiroah<?= $i.$k?>" name="soal_qiroah[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?>>
+                                                                    <input type="radio" class="soal_qiroah" id="soal_qiroah<?= $i.$k?>" name="soal_qiroah[<?= $i?>]" value="<?= $data?>" <?php if($k == 0){echo "required";}?> checked>
                                                                 </div>
                                                             <?php endforeach;?>
                                                         </div>
